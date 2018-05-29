@@ -58,14 +58,20 @@ midImg.setAttribute("src", siteContent["main-content"]["middle-image-src"]);
 
 // Navigation
 
+// ForEach Refactor
+const navBar = document.querySelectorAll("nav a");
+navBar.forEach((navElement, i) => {
+  navElement.innerHTML = siteContent["nav"]["nav-item-" + (i + 1)];
+});
 
-const navBar = document.getElementsByTagName("a");
-navBar[0].innerHTML = siteContent["nav"]["nav-item-1"];
-navBar[1].innerHTML = siteContent["nav"]["nav-item-2"];
-navBar[2].innerHTML = siteContent["nav"]["nav-item-3"];
-navBar[3].innerHTML = siteContent["nav"]["nav-item-4"];
-navBar[4].innerHTML = siteContent["nav"]["nav-item-5"];
-navBar[5].innerHTML = siteContent["nav"]["nav-item-6"];
+// Brute Force
+// const navBar = document.getElementsByTagName("a");
+// navBar[0].innerHTML = siteContent["nav"]["nav-item-1"];
+// navBar[1].innerHTML = siteContent["nav"]["nav-item-2"];
+// navBar[2].innerHTML = siteContent["nav"]["nav-item-3"];
+// navBar[3].innerHTML = siteContent["nav"]["nav-item-4"];
+// navBar[4].innerHTML = siteContent["nav"]["nav-item-5"];
+// navBar[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
 // Create links
 
